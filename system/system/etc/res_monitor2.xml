@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    1 version must 2.0
+    2 collect time unit second
+    3 collect time must be a multiple of 10
+-->
+<resmonitor version="2.0">
+    <item key="cpu" value="60"/>
+    <item key="io" value="30"/>
+    <item key="memory" value="60"/>
+    <item key="memory_fragment" value="60"/>
+    <item key="oom_adj" value="60"/>
+    <item key="rom" value="3600"/>
+    <item key="thermal" value="60"/>
+    <item key="vmstat" value="60"/>
+</resmonitor>

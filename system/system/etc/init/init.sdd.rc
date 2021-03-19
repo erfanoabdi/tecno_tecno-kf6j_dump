@@ -1,0 +1,2 @@
+on init
+   export LD_PRELOAD libudf.so #:libdirect-coredump.so #SDD: removed by peng.zhang3 to fix linker error when selinux is off @ 20200827

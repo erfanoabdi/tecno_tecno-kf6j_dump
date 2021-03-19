@@ -1,0 +1,16 @@
+on property:ro.boot.mode=normal && property:persist.libc.debug.malloc.program=*
+    setprop libc.debug.malloc.program ${persist.libc.debug.malloc.program}
+
+on property:ro.boot.mode=normal && property:persist.libc.debug.malloc.options=*
+    setprop libc.debug.malloc.options ${persist.libc.debug.malloc.options}
+    #restart surfaceflinger
+    #class_reset main
+    #class_start main
+
+on init && property:ro.boot.mode=normal
+    setprop libc.debug.monitor.size.max.mb 300
+    setprop libc.debug.monitor.size.min.mb 120
+    setprop libc.debug.monitor.time.mins 2
+    setprop libc.debug.malloc.options "backtrace=16 leak_monitor"
+    setprop libc.debug.malloc.surfaceflinger 1
+    setprop libc.debug.malloc.app_process64 1

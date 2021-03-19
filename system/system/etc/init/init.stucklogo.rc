@@ -1,0 +1,9 @@
+on post-fs
+	start stucklogo
+
+service stucklogo /system/bin/stucklogo
+    class core
+    user root
+    group root
+    disabled
+    oneshot
